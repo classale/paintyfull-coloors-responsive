@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+main > div, header {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.outside {
+    display: none;
+}
+
+header > .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+img {
+    width: 75%;
+    align-self: center;
+}
+
+main {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(1, 1fr);
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+}
+
+main > div > * {
+    margin: 10px;
+}
+
+.div1 {
+    background-color: #FBDF93;
+}
+
+.div2 {
+    background-color: #D3FB93;
+}
+
+.div3 {
+    background-color: #E193FB;
+}
+
+.div4 {
+    background-color: #93F0FB;
+}
+
+.div5 {
+    background-color: #F7FB93;
+}
+
+h1 {
+    color: #369EFF;
+    font-size: 38px;
+}
+
+@media screen and (min-width: 834px) {
+    header {
+        height: 50vh;
+        flex-direction: row;
+    }
+
+    img {
+        height: 85%;
+    }
+
+    .inside {
+        display: none;
+    }
+
+    .outside {
+        display: flex;
+    }
+
+    header > .contents {
+        height: unset;
+        padding: 20px;
+    }
+    
+    main {
+        height: 50vh;
+    }
+
+    main > div {
+        height: 100%;
+    }
+
+    main {
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        height: 50vh !important;
+        text-align: right;
+    }
+
+    main {
+        height: 50vh !important;
+        grid-template: 1fr / repeat(5, 1fr) !important;
+    }
+
+    img {
+        height: 85%;
+    }
+
+    h1 {
+        font-size: 58px;
+    }
+}
